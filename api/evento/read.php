@@ -23,7 +23,7 @@ if($num>0){
 	
 	// products array
 	$evento_arr=array();
-	$evento_arr["records"]=array();
+	//$evento_arr["records"]=array();
 	
 	// retrieve our table contents
 	// fetch() is faster than fetchAll()
@@ -45,7 +45,7 @@ if($num>0){
 			"pais_id" => $pais_id,
 
 		);
-		array_push($evento_arr["records"], $evento_item);
+		array_push($evento_arr, $evento_item);
 	}
 	
 	echo json_encode($evento_arr);
