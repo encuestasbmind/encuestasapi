@@ -5,25 +5,25 @@ header("Content-Type: application/json; charset=UTF-8");
 
 // include database and object files
 include_once '../config/database.php';
-include_once '../objects/evento.php';
+include_once '../objects/estudiante.php';
 
 // instantiate database and fabricante object
 $database = new Database();
 $db = $database->getConnection();
 
 // initialize object
-$evento = new evento($db);
+$estudiante = new estudiante($db);
 
 // query products
-$stmt = $evento->read();
+$stmt = $estudiante->read();
 $num = $stmt->rowCount();
 
 // check if more than 0 record found
 if($num>0){
 	
 	// products array
-	$evento_arr=array();
-	//$evento_arr["records"]=array();
+	$estudiante_arr=array();
+	//$estudiante_arr["records"]=array();
 	
 	// retrieve our table contents
 	// fetch() is faster than fetchAll()
@@ -33,31 +33,22 @@ if($num>0){
 		// this will make $row['name'] to
 		// just $name only
 		extract($row);
-		$evento_item=array(
+		$estudiante_item=array(
 			"id" => $id,
-			"fecha_inicio" => $fecha_inicio,
-			"fecha_final" => $fecha_final,
-			"ev_obs" => $ev_obs,
-			"curso_id" => $curso_id,
-			"instructor_id" => $instructor_id,
-			"tipo_delivery_id" => $tipo_delivery_id,
-			"estado_id" => $estado_id,
-			"ciudad_id"=> $ciudad_id,
-			"pais_id" => $pais_id,
-
+			"est_nombres " => $est_nombres,
+			"est_apellidos" => $est_apellidos,
+			"estudiante_email" => $estudiante_email,
 		);
-		array_push($evento_arr, $evento_item);
+		array_push($estudiante_arr, $estudiante_item);
 	}
-	
-	echo json_encode($evento_arr);
-
+	echo json_encode($estudiante_arr);
 }
-
 else {
 	
 	echo json_encode(
-        array("message" => "No fabricante found.")
+        array("message" => "No estudiante found.")
     );
 
 }
+
 ?>	
