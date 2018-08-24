@@ -20,22 +20,37 @@ $evento = new evento($db);
 $evento->id = isset($_GET['id']) ? $_GET['id'] : die();
  
 // read the details of product to be edited
-$evento->readOne();
- 
-// create array
-$evento_arr = array(
-    "id" => $evento->id,
-    "fecha_inicio" => $evento->fecha_inicio,
-    "fecha_final" => $evento->fecha_final,
-    "ev_obs" => $evento->ev_obs,
-	"curso_id" => $evento->curso_id,
-	"instructor_id" => $evento->instructor_id,
-	"tipo_delivery_id" => $evento->tipo_delivery_id,
-	"estado_id" => $evento->estado_id,
-	"pais_id" => $evento->pais_id
+$stmt = $evento->readOne();
 
-);
+$num = $stmt->rowCount();
+
+// check if more than 0 record found
+if($num>0){
+	// create array
+	$evento_arr = array(
+		"id" => $evento->id,
+		"fecha_inicio" => $evento->fecha_inicio,
+		"fecha_final" => $evento->fecha_final,
+		"ev_obs" => $evento->ev_obs,
+		"curso_id" => $evento->curso_id,
+		"instructor_id" => $evento->instructor_id,
+		"tipo_delivery_id" => $evento->tipo_delivery_id,
+		"estado_id" => $evento->estado_id,
+		"pais_id" => $evento->pais_id
+
+	);
+	 
+	// make it json format
+	print_r(json_encode($evento_arr));
+	
+}else{
+	
+	echo json_encode(
+        array("message" => "No existen eventos con el id suministrado")
+    );
+	
+}
+	
  
-// make it json format
-print_r(json_encode($evento_arr));
+
 ?>
