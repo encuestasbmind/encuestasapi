@@ -26,10 +26,9 @@ $cursos->readOne();
 $cursos_arr = array(
     "id" => $cursos->id,
     "horas" => $cursos->horas,
-    "fabricante_id" => $fabricante_id->fecha_final,
-    "categorias_id" => $categorias_id->ev_obs
+    "fabricante_id" => $cursos->fabricante_id,
+    "categorias_id" => $cursos->categorias_id
 );
- 
 // make it json format
 print_r(json_encode($cursos_arr));
 ?>
