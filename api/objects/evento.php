@@ -188,6 +188,8 @@ function readOne(){
     $this->estado_id = $row['estado_id'];
     $this->ciudad_id = $row['ciudad_id'];
     $this->pais_id = $row['pais_id'];
+	
+	return $stmt;
 }
 
 }//fin Class
