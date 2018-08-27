@@ -21,7 +21,6 @@ $evento->id = isset($_GET['id']) ? $_GET['id'] : die();
  
 // read the details of product to be edited
 $stmt = $evento->readOne();
-
 $num = $stmt->rowCount();
 
 // check if more than 0 record found

@@ -112,7 +112,7 @@ function readOne(){
     // query to read single record
     $query = "SELECT
                 ID AS id, 
-                NOMBRE_CURAS AS nombre_curas, 
+                NOMBRE_CUR AS nombre_cur, 
                 HORAS AS horas,
                 FABRICANTE_ID AS fabricante_id,
                 CATEGORIAS_ID AS categorias_id
@@ -137,15 +137,14 @@ function readOne(){
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
  
     // set values to object properties
-    $this->fecha_inicio = $row['nombre_curas'];
-    $this->fecha_final = $row['horas'];
-    $this->ev_obs=$row['fabricante_id'];
-    $this->curso_id= $row['categorias_id'];
-    
+    $this->nombre_cur = $row['nombre_cur'];
+    $this->horas = $row['horas'];
+    $this->fabricante_id=$row['fabricante_id'];
+    $this->categorias_id= $row['categorias_id'];
+
+    return $stmt;
 }
 
-
-
-}
+}//class
 
 ?>
