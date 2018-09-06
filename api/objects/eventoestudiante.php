@@ -37,16 +37,17 @@ class eventoestudiante{
 		
 		// execute query
 		$stmt->execute();
- 
+        
 		// get retrieved row
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
- 
+        
 		// set values to object properties
 		$this->id = $row['id'];
 		$this->eveestud = $row['eveestud'];
 		$this->eventoid=$row['eventoid'];
 		$this->estudianteid= $row['estudianteid'];
 		
+		return $stmt;
 	}
 	
 }
