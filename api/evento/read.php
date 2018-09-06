@@ -44,7 +44,7 @@ if($num>0){
 			"estado_id" => $estado_id,
 			"ciudad_id"=> $ciudad_id,
 			"pais_id" => $pais_id,
-
+			"estado_evento" => $estado_evento
 		);
 		array_push($evento_arr, $evento_item);
 	}

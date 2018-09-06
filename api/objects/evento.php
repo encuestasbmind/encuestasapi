@@ -16,6 +16,7 @@ class evento{
     public $estado_id;
     public $ciudad_id;
     public $pais_id;
+	public $estado_evento;
 
     // constructor with $db as database connection
     public function __construct($db){
@@ -34,7 +35,8 @@ class evento{
 		TIPO_DELIVERY_ID AS tipo_delivery_id,
 		ESTADO_ID AS estado_id,
 		CIUDAD_ID AS ciudad_id,
-		PAIS_ID AS pais_id
+		PAIS_ID AS pais_id, 
+		ESTADO_EVENTO AS estado_evento
 		FROM SEBM.EVENTO";
 
 		// prepare query statement
@@ -157,7 +159,8 @@ function readOne(){
                 TIPO_DELIVERY_ID AS tipo_delivery_id,
                 ESTADO_ID AS estado_id,
                 CIUDAD_ID AS ciudad_id, 
-                PAIS_ID AS pais_id
+                PAIS_ID AS pais_id, 
+				ESTADO_EVENTO AS estado_evento
 
             FROM
                 SEBM.EVENTO
@@ -188,6 +191,7 @@ function readOne(){
     $this->estado_id = $row['estado_id'];
     $this->ciudad_id = $row['ciudad_id'];
     $this->pais_id = $row['pais_id'];
+	$this->estado_evento = $row['estado_evento'];
 	
 	return $stmt;
 }

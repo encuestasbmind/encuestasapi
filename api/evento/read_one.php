@@ -35,8 +35,8 @@ if($num>0){
 		"instructor_id" => $evento->instructor_id,
 		"tipo_delivery_id" => $evento->tipo_delivery_id,
 		"estado_id" => $evento->estado_id,
-		"pais_id" => $evento->pais_id
-
+		"pais_id" => $evento->pais_id, 
+		"estado_evento" => $evento->estado_evento
 	);
 	 
 	// make it json format
