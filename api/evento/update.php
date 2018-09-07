@@ -33,6 +33,8 @@ $evento->tipo_delivery_id = $data->tipo_delivery_id;
 $evento->estado_id = $data->estado_id;
 $evento->ciudad_id = $data->ciudad_id;
 $evento->pais_id = $data->pais_id;
+$evento->estado_evento = $data->estado_evento;
+
  
 // update the product
 if($evento->update()){
