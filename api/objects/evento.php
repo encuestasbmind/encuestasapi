@@ -55,7 +55,7 @@ class evento{
 		$query = "INSERT INTO
 					SEBM.EVENTO
 					SET
-						ID=:id, FECHA_INICIO=:fecha_inicio, FECHA_FINAL=:fecha_final,EV_OBS=:ev_obs,CURSO_ID=:curso_id,INSTRUCTOR_ID=:instructor_id,TIPO_DELIVERY_ID=:tipo_delivery_id,ESTADO_ID=:estado_id,CIUDAD_ID=:ciudad_id, PAIS_ID=:pais_id";
+						ID=:id, FECHA_INICIO=:fecha_inicio, FECHA_FINAL=:fecha_final,EV_OBS=:ev_obs,CURSO_ID=:curso_id,INSTRUCTOR_ID=:instructor_id,TIPO_DELIVERY_ID=:tipo_delivery_id,ESTADO_ID=:estado_id,CIUDAD_ID=:ciudad_id, PAIS_ID=:pais_id , ESTADO_EVENTO=:estado_evento";
 
 
 		// prepare query
@@ -71,6 +71,8 @@ class evento{
 	    $this->estado_id=htmlspecialchars(strip_tags($this->estado_id));
 	    $this->ciudad_id=htmlspecialchars(strip_tags($this->ciudad_id));
 	    $this->pais_id=htmlspecialchars(strip_tags($this->pais_id));
+        $this->estado_evento=htmlspecialchars(strip_tags($this->estado_evento));
+        
 
 		
 		// bind values
@@ -84,6 +86,8 @@ class evento{
         $stmt->bindParam(":estado_id", $this->estado_id);
         $stmt->bindParam(":ciudad_id", $this->ciudad_id);
         $stmt->bindParam(":pais_id", $this->pais_id);
+        $stmt->bindParam(":estado_evento", $this->estado_evento);
+        
 		// execute query
 		if($stmt->execute()){
 			return true;
@@ -106,7 +110,9 @@ function update(){
               tipo_delivery_id=:tipo_delivery_id,
               estado_id=:estado_id,
               ciudad_id=:ciudad_id,
-              pais_id=:pais_id
+              pais_id=:pais_id,
+              estado_evento=:estado_evento
+
             WHERE
                 id = :id";
  
@@ -123,6 +129,7 @@ function update(){
     $this->estado_id=htmlspecialchars(strip_tags($this->estado_id));
     $this->ciudad_id=htmlspecialchars(strip_tags($this->ciudad_id));
     $this->pais_id=htmlspecialchars(strip_tags($this->pais_id));
+    $this->estado_evento=htmlspecialchars(strip_tags($this->estado_evento));
     $this->id=htmlspecialchars(strip_tags($this->id));
  
     // bind new values
@@ -135,6 +142,7 @@ function update(){
     $stmt->bindParam(':estado_id', $this->estado_id);
     $stmt->bindParam(':ciudad_id', $this->ciudad_id);
     $stmt->bindParam(':pais_id', $this->pais_id);
+    $stmt->bindParam(':estado_evento', $this->estado_evento);
     $stmt->bindParam(':id', $this->id);
  
     // execute the query

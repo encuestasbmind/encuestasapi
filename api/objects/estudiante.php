@@ -61,6 +61,34 @@
 		}
 		return false;
 	}
+
+	function readOne(){
+ 
+    // query to read single record
+    $query = "SELECT
+                ID AS id
+
+            FROM
+                SEBM.ESTUDIANTE
+               
+            WHERE
+            id=:id";
+            
+
+    // prepare query statement
+    $stmt = $this->conn->prepare( $query );
+ 
+    // bind id of product to be updated
+    $stmt->bindParam(':id', $this->id);
+ 
+    // execute query
+    $stmt->execute();
+ 
+    // get retrieved row
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+	
+	return $stmt;
+}
  }	
 
 ?>
