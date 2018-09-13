@@ -10,7 +10,7 @@ class evento{
     public $fecha_inicio;
     public $fecha_final;
     public $ev_obs;
-    public $cursos_id;
+    public $curso_id;
     public $instructor_id;
     public $tipo_delivery_id;
     public $estado_id;
