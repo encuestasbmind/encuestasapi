@@ -1,5 +1,5 @@
 <?php
-class eventodesc{
+class eventodescfinal{
  
     // database connection and table name
     private $conn;
@@ -7,8 +7,12 @@ class eventodesc{
  
     // object properties
     public $id;
-    public $curso;
     public $instructor;
+    public $ESTUDIANTE_ID;
+    public $nombres ;
+    public $apellidos;
+    public $email;
+
     
 
     // constructor with $db as database connection
@@ -83,13 +87,9 @@ class eventodesc{
 		}
 		return false;
 	}
-
-
 function update(){
- 
     // update query
-    $query = "UPDATE EVENTO
-                
+    $query = "UPDATE EVENTO                
             SET
               fecha_inicio=:fecha_inicio, 
               fecha_final=:fecha_final,
@@ -102,10 +102,8 @@ function update(){
               pais_id=:pais_id
             WHERE
                 id = :id";
- 
     // prepare query statement
     $stmt = $this->conn->prepare($query);
- 
     // sanitize
     $this->fecha_inicio=htmlspecialchars(strip_tags($this->fecha_inicio));
     $this->fecha_final=htmlspecialchars(strip_tags($this->fecha_final));
@@ -117,7 +115,6 @@ function update(){
     $this->ciudad_id=htmlspecialchars(strip_tags($this->ciudad_id));
     $this->pais_id=htmlspecialchars(strip_tags($this->pais_id));
     $this->id=htmlspecialchars(strip_tags($this->id));
- 
     // bind new values
     $stmt->bindParam(':fecha_inicio', $this->fecha_inicio);
     $stmt->bindParam(':fecha_final', $this->fecha_final);
@@ -129,43 +126,49 @@ function update(){
     $stmt->bindParam(':ciudad_id', $this->ciudad_id);
     $stmt->bindParam(':pais_id', $this->pais_id);
     $stmt->bindParam(':id', $this->id);
- 
     // execute the query
     if($stmt->execute()){
         return true;
     }
- 
     return false;
 }
-
-
 function readOne(){
- 
     // query to read single record
-    $query = "SELECT E.ID AS id, C.NOMBRE_CUR AS curso , I.NOMBRE_INST AS instructor
-				FROM EVENTO AS E INNER JOIN CURSO C 
-								 ON E.CURSO_ID = C.ID
-						INNER JOIN INSTRUCTOR I 
-						ON E.INSTRUCTOR_ID = I.ID
-				WHERE E.ID = :id";
+    $query = "SELECT E.ID AS id , I.NOMBRE_INST AS instructor,ee.ESTUDIANTE_ID as ESTUDIANTE_ID, 
+    es.EST_NOMBRES as nombres , es.EST_APELLIDOS as apellidos, es.ESTUDIANTE_EMAIL as email
+    FROM EVENTO E INNER JOIN instructor I 
+    ON e.INSTRUCTOR_ID = I.ID 
+    inner join evento_estudiante ee 
+    on e.ID = ee.EVENTO_ID
+    inner join estudiante es 
+    on ee.ESTUDIANTE_ID = es.ID
+    WHERE E.ID = 1 and ee.ESTUDIANTE_ID =1";
 
     // prepare query statement
+
     $stmt = $this->conn->prepare( $query );
- 
+
     // bind id of product to be updated
+
     $stmt->bindParam(':id', $this->id);
- 
+
     // execute query
+
     $stmt->execute();
- 
+
     // get retrieved row
+
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
- 
+
     // set values to object properties
+
     $this->id = $row['id'];
-    $this->curso = $row['curso'];
     $this->instructor=$row['instructor'];
-	
+    $this->ESTUDIANTE_ID=$row['ESTUDIANTE_ID'];
+    $this->nombres = $row['nombres'];
+    $this->apellidos = $row['apellidos'];
+    $this->email=$row['email'];
+
 	return $stmt;
 }
 
