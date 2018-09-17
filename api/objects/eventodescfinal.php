@@ -134,15 +134,7 @@ function update(){
 }
 function readOne(){
     // query to read single record
-    $query = "SELECT E.ID AS id , I.NOMBRE_INST AS instructor,ee.ESTUDIANTE_ID as ESTUDIANTE_ID, 
-    es.EST_NOMBRES as nombres , es.EST_APELLIDOS as apellidos, es.ESTUDIANTE_EMAIL as email
-    FROM EVENTO E INNER JOIN instructor I 
-    ON e.INSTRUCTOR_ID = I.ID 
-    inner join evento_estudiante ee 
-    on e.ID = ee.EVENTO_ID
-    inner join estudiante es 
-    on ee.ESTUDIANTE_ID = es.ID
-    WHERE E.ID = 1 and ee.ESTUDIANTE_ID =1";
+    $query = "SELECT E.ID AS id , I.NOMBRE_INST AS instructor,ee.ESTUDIANTE_ID as ESTUDIANTE_ID, es.EST_NOMBRES as nombres , es.EST_APELLIDOS as apellidos, es.ESTUDIANTE_EMAIL as email, c.ID as cur_ID FROM EVENTO E INNER JOIN instructor I ON e.INSTRUCTOR_ID = I.ID inner join evento_estudiante ee on e.ID = ee.EVENTO_ID inner join estudiante es on ee.ESTUDIANTE_ID = es.ID inner join curso c on e.CURSO_ID = c.ID WHERE E.ID = 1 and ee.ESTUDIANTE_ID =1";
 
     // prepare query statement
 
@@ -159,16 +151,14 @@ function readOne(){
     // get retrieved row
 
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
     // set values to object properties
-
     $this->id = $row['id'];
     $this->instructor=$row['instructor'];
     $this->ESTUDIANTE_ID=$row['ESTUDIANTE_ID'];
     $this->nombres = $row['nombres'];
     $this->apellidos = $row['apellidos'];
     $this->email=$row['email'];
-
+    $this->cur_ID=$row['cur_ID'];
 	return $stmt;
 }
 
