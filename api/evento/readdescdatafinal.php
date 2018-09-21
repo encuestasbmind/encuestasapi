@@ -19,9 +19,7 @@ $eventodescfinal = new eventodescfinal($db);
 // set ID property of product to be edited
 $eventodescfinal->id = isset($_GET['id']) ? $_GET['id'] : die();
 $eventodescfinal->estudiante_id = isset($_GET['estudiante_id']) ? $_GET['estudiante_id'] : die();
-$eventodescfinal->nombre_cur = isset($_GET['nombre_cur']) ? $_GET['nombre_cur'] : die();
 
- 
 // read the details of product to be edited
 $stmt = $eventodescfinal->readOne();
 $num = $stmt->rowCount();
@@ -35,8 +33,8 @@ if($num>0){
     "estudiante_id" => $eventodescfinal->estudiante_id,
     "nombres"=> $eventodescfinal->nombres,
     "apellidos"=> $eventodescfinal->apellidos,
-    "email"=> $eventodescfinal->email
-    "cur_ID"=> $eventodescfinal->cur_ID
+    "email"=> $eventodescfinal->email,
+    "curso"=> $eventodescfinal->curso
 
 	);
 	// make it json format

@@ -8,10 +8,11 @@ class eventodescfinal{
     // object properties
     public $id;
     public $instructor;
-    public $ESTUDIANTE_ID;
+    public $estudiante_id;
     public $nombres ;
     public $apellidos;
     public $email;
+	public $curso;
 
     
 
@@ -134,7 +135,17 @@ function update(){
 }
 function readOne(){
     // query to read single record
-    $query = "SELECT E.ID AS id , I.NOMBRE_INST AS instructor,ee.ESTUDIANTE_ID as ESTUDIANTE_ID, es.EST_NOMBRES as nombres , es.EST_APELLIDOS as apellidos, es.ESTUDIANTE_EMAIL as email, c.ID as cur_ID FROM EVENTO E INNER JOIN instructor I ON e.INSTRUCTOR_ID = I.ID inner join evento_estudiante ee on e.ID = ee.EVENTO_ID inner join estudiante es on ee.ESTUDIANTE_ID = es.ID inner join curso c on e.CURSO_ID = c.ID WHERE E.ID = 1 and ee.ESTUDIANTE_ID =1";
+    $query = "SELECT E.ID AS id,I.NOMBRE_INST AS instructor,ee.ESTUDIANTE_ID as ESTUDIANTE_ID, es.EST_NOMBRES as nombres , 
+	                 es.EST_APELLIDOS as apellidos, es.ESTUDIANTE_EMAIL as email, c.NOMBRE_CUR as curso  
+			  FROM EVENTO E INNER JOIN instructor I 
+			         ON e.INSTRUCTOR_ID = I.ID 
+			     inner join evento_estudiante ee 
+					 on e.ID = ee.EVENTO_ID 
+				 inner join estudiante es 
+				     on ee.ESTUDIANTE_ID = es.ID 
+				 inner join curso c 
+			         on e.CURSO_ID = c.ID 
+			  WHERE E.ID = :id and ee.ESTUDIANTE_ID = :estudiante_id";
 
     // prepare query statement
 
@@ -143,6 +154,7 @@ function readOne(){
     // bind id of product to be updated
 
     $stmt->bindParam(':id', $this->id);
+	$stmt->bindParam(':estudiante_id', $this->estudiante_id);
 
     // execute query
 
@@ -158,7 +170,7 @@ function readOne(){
     $this->nombres = $row['nombres'];
     $this->apellidos = $row['apellidos'];
     $this->email=$row['email'];
-    $this->cur_ID=$row['cur_ID'];
+    $this->curso=$row['curso'];
 	return $stmt;
 }
 
