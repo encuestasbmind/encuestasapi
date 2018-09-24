@@ -13,9 +13,8 @@ class eventodescfinal{
     public $apellidos;
     public $email;
 	public $curso;
-
-    
-
+	public $telefono; 
+	
     // constructor with $db as database connection
     public function __construct($db){
         $this->conn = $db;

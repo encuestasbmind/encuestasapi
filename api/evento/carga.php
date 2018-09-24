@@ -18,7 +18,7 @@ $db = $database->getConnection();
 $evento = new evento($db);
 
 // get posted data
-$data = json_decode(file_get_contents("php://input"));
+$data = file_get_contents("php://input");
 
 // set evento property values
 $evento->texto = $data->texto;
