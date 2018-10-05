@@ -1,0 +1,97 @@
+New data line 1
+New data line 2New data line 1
+New data line 2New data line 1
+New data line 2
+1537908960Inicio
+Tue Sep 25, 2018 22:57 Inicio
+Tue Sep 25, 2018 23:05 Inicio
+Tue Sep 25, 2018 23:05 Datos obtenidos
+Tue Sep 25, 2018 23:05 Archivo movido 
+Tue Sep 25, 2018 23:05 Inicio
+Tue Sep 25, 2018 23:05 Datos obtenidos
+Tue Sep 25, 2018 23:05 Archivo movido 
+Tue Sep 25, 2018 23:06 Inicio
+Tue Sep 25, 2018 23:06 Datos obtenidos
+Tue Sep 25, 2018 23:06 Name 
+Tue Sep 25, 2018 23:06 File 
+Tue Sep 25, 2018 23:06 Archivo movido 
+Tue Sep 25, 2018 23:18 Inicio
+Tue Sep 25, 2018 23:18 Datos obtenidos
+Tue Sep 25, 2018 23:18 Name 
+Tue Sep 25, 2018 23:18 File 
+Tue Sep 25, 2018 23:18 Archivo movido 
+Tue Sep 25, 2018 23:18 Inicio
+Tue Sep 25, 2018 23:18 Datos obtenidos
+Tue Sep 25, 2018 23:18 Name 
+Tue Sep 25, 2018 23:18 File 
+Tue Sep 25, 2018 23:18 Archivo movido 
+Tue Sep 25, 2018 23:18 Inicio
+Tue Sep 25, 2018 23:18 Datos obtenidos
+Tue Sep 25, 2018 23:18 Name 
+Tue Sep 25, 2018 23:18 File 
+Tue Sep 25, 2018 23:18 Archivo movido 
+Tue Sep 25, 2018 23:30 Inicio
+Tue Sep 25, 2018 23:30 Datos obtenidos
+Tue Sep 25, 2018 23:30 Name 
+Tue Sep 25, 2018 23:30 File 
+Tue Sep 25, 2018 23:30 Archivo movido 
+Tue Sep 25, 2018 23:30 Inicio
+Tue Sep 25, 2018 23:30 Datos obtenidos
+Tue Sep 25, 2018 23:30 Name 
+Tue Sep 25, 2018 23:30 File 
+Tue Sep 25, 2018 23:30 Archivo movido 
+Tue Sep 25, 2018 23:32 Inicio
+Tue Sep 25, 2018 23:32 Datos obtenidos
+Tue Sep 25, 2018 23:32 Name 
+Tue Sep 25, 2018 23:32 File 
+Tue Sep 25, 2018 23:32 Archivo movido 
+Tue Sep 25, 2018 23:55 Inicio
+Tue Sep 25, 2018 23:55 Datos obtenidos
+Tue Sep 25, 2018 23:55 Name 
+Tue Sep 25, 2018 23:55 File 
+Tue Sep 25, 2018 23:55 Archivo movido 
+Tue Sep 25, 2018 23:55 Inicio
+Tue Sep 25, 2018 23:55 Datos obtenidos
+Tue Sep 25, 2018 23:55 Name 
+Tue Sep 25, 2018 23:55 File 
+Tue Sep 25, 2018 23:55 Archivo movido 
+Tue Sep 25, 2018 23:57 Inicio
+Tue Sep 25, 2018 23:57 Datos obtenidos
+Tue Sep 25, 2018 23:57 Name 
+Tue Sep 25, 2018 23:57 File 
+Tue Sep 25, 2018 23:57 Archivo movido 
+Tue Sep 25, 2018 23:58 Inicio
+Tue Sep 25, 2018 23:58 Datos obtenidos
+Tue Sep 25, 2018 23:58 Name 
+Tue Sep 25, 2018 23:58 File 
+Tue Sep 25, 2018 23:58 Archivo movido 
+Wed Sep 26, 2018 0:02 Inicio
+Wed Sep 26, 2018 0:02 Datos obtenidos
+Wed Sep 26, 2018 0:02 Name prueba.csv
+Wed Sep 26, 2018 0:02 File C:\xampp\tmp\php9242.tmp
+Wed Sep 26, 2018 0:02 Archivo movido 
+Wed Sep 26, 2018 0:02 Inicio
+Wed Sep 26, 2018 0:02 Datos obtenidos
+Wed Sep 26, 2018 0:02 Name prueba.csv
+Wed Sep 26, 2018 0:02 File C:\xampp\tmp\php4F3.tmp
+Wed Sep 26, 2018 0:02 Archivo movido 
+Wed Sep 26, 2018 19:07 Inicio
+Wed Sep 26, 2018 19:07 Datos obtenidos
+Wed Sep 26, 2018 19:07 Name datoscargaencuestas.csv
+Wed Sep 26, 2018 19:07 File C:\xampp\tmp\php916F.tmp
+Wed Sep 26, 2018 19:07 Archivo movido 
+Wed Sep 26, 2018 19:16 Inicio
+Wed Sep 26, 2018 19:16 Datos obtenidos
+Wed Sep 26, 2018 19:16 Name datoscargaencuestas.csv
+Wed Sep 26, 2018 19:16 File C:\xampp\tmp\phpCB74.tmp
+Wed Sep 26, 2018 19:16 Archivo movido 
+Wed Sep 26, 2018 19:20 Inicio
+Wed Sep 26, 2018 19:20 Datos obtenidos
+Wed Sep 26, 2018 19:20 Name datoscargaencuestas.csv
+Wed Sep 26, 2018 19:20 File C:\xampp\tmp\php88DA.tmp
+Wed Sep 26, 2018 19:20 Archivo movido 
+Wed Sep 26, 2018 19:22 Inicio
+Wed Sep 26, 2018 19:22 Datos obtenidos
+Wed Sep 26, 2018 19:22 Name datoscargaencuestas.csv
+Wed Sep 26, 2018 19:22 File C:\xampp\tmp\php25E4.tmp
+Wed Sep 26, 2018 19:22 Archivo movido 
