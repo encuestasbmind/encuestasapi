@@ -15,14 +15,19 @@ $db = $database->getConnection();
  
 // prepare product object
 $eventodescfinal = new eventodescfinal($db);
- 
+
+
+$stmt = $eventodescfinal->readOne();
+$num = $stmt->rowCount();
+
+
+
 // set ID property of product to be edited
 $eventodescfinal->id = isset($_GET['id']) ? $_GET['id'] : die();
 $eventodescfinal->estudiante_id = isset($_GET['estudiante_id']) ? $_GET['estudiante_id'] : die();
 
 // read the details of product to be edited
-$stmt = $eventodescfinal->readOne();
-$num = $stmt->rowCount();
+
 
 // check if more than 0 record found
 if($num>0){
@@ -38,10 +43,13 @@ if($num>0){
 
 	);
 	// make it json format
-	print_r(json_encode($evento_arr));
+	   print_r(json_encode($evento_arr));
+       
 }else{
+
 	echo json_encode(
-        array("message" => "No existen eventos con el id suministrado")
+        array("message" => "No existen eventos con el id suministrados")
     );
 }
-	
+
+?>	

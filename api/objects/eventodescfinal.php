@@ -87,6 +87,8 @@ class eventodescfinal{
 		}
 		return false;
 	}
+
+    
 function update(){
     // update query
     $query = "UPDATE EVENTO                

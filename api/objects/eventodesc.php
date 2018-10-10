@@ -162,6 +162,7 @@ function readOne(){
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
  
     // set values to object properties
+    
     $this->id = $row['id'];
     $this->curso = $row['curso'];
     $this->instructor=$row['instructor'];
