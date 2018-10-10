@@ -17,17 +17,16 @@ $db = $database->getConnection();
 $eventodescfinal = new eventodescfinal($db);
 
 
-$stmt = $eventodescfinal->readOne();
-$num = $stmt->rowCount();
-
-
-
 // set ID property of product to be edited
 $eventodescfinal->id = isset($_GET['id']) ? $_GET['id'] : die();
 $eventodescfinal->estudiante_id = isset($_GET['estudiante_id']) ? $_GET['estudiante_id'] : die();
 
+//echo $eventodescfinal->id; 
+//echo $eventodescfinal->estudiante_id; 
 // read the details of product to be edited
 
+$stmt = $eventodescfinal->readOne();
+$num = $stmt->rowCount();
 
 // check if more than 0 record found
 if($num>0){

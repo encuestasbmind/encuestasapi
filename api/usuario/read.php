@@ -48,9 +48,7 @@ if($num>0){
 	
 	echo json_encode($usuario_arr);
 
-}
-
-else {
+}else{
 	
 	echo json_encode(
         array("message" => "No fabricante found.")

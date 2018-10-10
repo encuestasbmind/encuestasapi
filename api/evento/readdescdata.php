@@ -38,7 +38,7 @@ if($num>0){
 }else{
 	
 	echo json_encode(
-        array("message" => "No existen eventos con el id suministrado")
+        array("message" => "No existen eventos con el id suministrados")
     );
 	
 }
