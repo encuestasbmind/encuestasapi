@@ -38,6 +38,7 @@ class eventodescfinal{
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 		// execute query
 		$stmt->execute();
@@ -57,6 +58,7 @@ class eventodescfinal{
 
 		// prepare query
 		$stmt = $this->conn->prepare($query);
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		// sanitize
 		$this->id=htmlspecialchars(strip_tags($this->id));
 		$this->fecha_inicio=htmlspecialchars(strip_tags($this->fecha_inicio));
@@ -106,6 +108,7 @@ function update(){
                 id = :id";
     // prepare query statement
     $stmt = $this->conn->prepare($query);
+	$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // sanitize
     $this->fecha_inicio=htmlspecialchars(strip_tags($this->fecha_inicio));
     $this->fecha_final=htmlspecialchars(strip_tags($this->fecha_final));
@@ -151,6 +154,7 @@ function readOne(){
     // prepare query statement
 
     $stmt = $this->conn->prepare( $query );
+	$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // bind id of product to be updated
 

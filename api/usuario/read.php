@@ -7,17 +7,34 @@ header("Content-Type: application/json; charset=UTF-8");
 include_once '../config/database.php';
 include_once '../objects/usuario.php';
 
+//Log
+$my_file = 'file.txt';
+$handle = fopen($my_file, 'a') or die('Cannot open file:  '.$my_file);
+$new_data = "\n".  date("D M d, Y G:i") . ' Inicio';
+fwrite($handle, $new_data);
+
+
+try{
+
 // instantiate database and fabricante object
 $database = new Database();
 $db = $database->getConnection();
 
+$new_data = "\n".  date("D M d, Y G:i") . ' Base de datos conectada';
+fwrite($handle, $new_data);
+
 // initialize object
 $usuario = new usuario($db);
 
+$new_data = "\n".  date("D M d, Y G:i") . ' Usuario creado';
+fwrite($handle, $new_data);
 
 // query products
 $stmt = $usuario->read();
 $num = $stmt->rowCount();
+
+$new_data = "\n".  date("D M d, Y G:i") . ' Comando de base de datos ejecutados';
+fwrite($handle, $new_data);
 
 // check if more than 0 record found
 if($num>0){
@@ -55,4 +72,11 @@ if($num>0){
     );
 
 }
+
+} catch (Exception $e) {
+	
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+	
+}	
+	
 ?>	

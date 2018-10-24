@@ -21,6 +21,7 @@ class fabricante{
 		
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 		// execute query
 		$stmt->execute();
@@ -39,6 +40,7 @@ class fabricante{
 
 		// prepare query
 		$stmt = $this->conn->prepare($query);
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		// sanitize
 		$this->id=htmlspecialchars(strip_tags($this->id));

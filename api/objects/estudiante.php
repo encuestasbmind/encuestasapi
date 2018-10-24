@@ -27,6 +27,7 @@
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 		// execute query
 		$stmt->execute();
@@ -44,6 +45,7 @@
 
 		// prepare query
 		$stmt = $this->conn->prepare($query);
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		// sanitize
 		$this->id=htmlspecialchars(strip_tags($this->id));
 		$this->est_nombres=htmlspecialchars(strip_tags($this->est_nombres));
@@ -77,6 +79,7 @@
 
     // prepare query statement
     $stmt = $this->conn->prepare( $query );
+	$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
     // bind id of product to be updated
     $stmt->bindParam(':id', $this->id);

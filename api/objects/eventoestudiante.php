@@ -30,6 +30,7 @@ class eventoestudiante{
 		
 		// prepare query statement
 		$stmt = $this->conn->prepare( $query );
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 		// bind id of product to be updated
 		$stmt->bindParam(':eventoid', $this->eventoid);

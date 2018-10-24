@@ -33,6 +33,7 @@ class instructor{
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 		// execute query
 		$stmt->execute();
@@ -52,6 +53,7 @@ class instructor{
 
 		// prepare query
 		$stmt = $this->conn->prepare($query);
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		// sanitize
 		$this->id=htmlspecialchars(strip_tags($this->id));
 		$this->nombre_inst=htmlspecialchars(strip_tags($this->nombre_inst));
@@ -96,6 +98,7 @@ class instructor{
  
     // prepare query statement
     $stmt = $this->conn->prepare($query);
+	$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
     // sanitize
     $this->nombre_inst=htmlspecialchars(strip_tags($this->nombre_inst));
@@ -144,6 +147,7 @@ function readOne(){
 
     // prepare query statement
     $stmt = $this->conn->prepare( $query );
+	$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
     // bind id of product to be updated
     $stmt->bindParam(':id', $this->id);

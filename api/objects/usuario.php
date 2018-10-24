@@ -30,6 +30,8 @@ class usuario{
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
 		
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
 		// execute query
 		$stmt->execute();
 		
@@ -39,6 +41,7 @@ class usuario{
 	// create product
 	function create(){
 		
+		
 		// query to insert record
 		$query = "INSERT INTO
 					SEBM.USUARIO
@@ -47,6 +50,9 @@ class usuario{
 
 		// prepare query
 		$stmt = $this->conn->prepare($query);
+		
+		$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
 		// sanitize
 		$this->id=htmlspecialchars(strip_tags($this->id));
 		$this->usuario=htmlspecialchars(strip_tags($this->usuario));
@@ -65,7 +71,10 @@ class usuario{
 		if($stmt->execute()){
 			return true;
 		}
+		
 		return false;
+
+		
 	}
 	// update the product
 function update(){
@@ -80,6 +89,8 @@ function update(){
                 id = :id";
     // prepare query statement
     $stmt = $this->conn->prepare($query);
+	$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
     // sanitize
     $this->usuario=htmlspecialchars(strip_tags($this->usuario));
     $this->contrasena=htmlspecialchars(strip_tags($this->contrasena));
@@ -115,6 +126,7 @@ function search($keywords){
  
     // prepare query statement
     $stmt = $this->conn->prepare($query);
+	$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
     // sanitize
     $keywords=htmlspecialchars(strip_tags($keywords));
@@ -145,6 +157,7 @@ function readOne(){
          
     // prepare query statement
     $stmt = $this->conn->prepare( $query );
+	$this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // bind id of product to be updated
     $stmt->bindParam(':id', $this->id);
  

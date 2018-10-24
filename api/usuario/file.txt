@@ -1,0 +1,41 @@
+
+Fri Oct 12, 2018 0:05 Inicio
+Fri Oct 12, 2018 0:05 Base de datos conectada
+Fri Oct 12, 2018 0:05 Usuario creado
+Fri Oct 12, 2018 0:05 Comando de base de datos ejecutados
+Fri Oct 12, 2018 0:05 Inicio
+Fri Oct 12, 2018 0:05 Base de datos conectada
+Fri Oct 12, 2018 0:05 Usuario creado
+Fri Oct 12, 2018 0:05 Comando de base de datos ejecutados
+Fri Oct 12, 2018 0:06 Inicio
+Fri Oct 12, 2018 0:06 Base de datos conectada
+Fri Oct 12, 2018 0:06 Usuario creado
+Fri Oct 12, 2018 0:06 Comando de base de datos ejecutados
+Fri Oct 12, 2018 0:09 Inicio
+Fri Oct 12, 2018 0:09 Base de datos conectada
+Fri Oct 12, 2018 0:09 Usuario creado
+Fri Oct 12, 2018 0:09 Comando de base de datos ejecutados
+Fri Oct 12, 2018 0:09 Inicio
+Fri Oct 12, 2018 0:09 Base de datos conectada
+Fri Oct 12, 2018 0:09 Usuario creado
+Fri Oct 12, 2018 0:09 Comando de base de datos ejecutados
+Fri Oct 12, 2018 0:10 Inicio
+Fri Oct 12, 2018 0:10 Base de datos conectada
+Fri Oct 12, 2018 0:10 Usuario creado
+Fri Oct 12, 2018 0:10 Comando de base de datos ejecutados
+Fri Oct 12, 2018 0:10 Inicio
+Fri Oct 12, 2018 0:10 Base de datos conectada
+Fri Oct 12, 2018 0:10 Usuario creado
+Fri Oct 12, 2018 0:10 Comando de base de datos ejecutados
+Fri Oct 12, 2018 0:24 Inicio
+Fri Oct 12, 2018 0:24 Base de datos conectada
+Fri Oct 12, 2018 0:24 Usuario creado
+Fri Oct 12, 2018 0:24 Comando de base de datos ejecutados
+Fri Oct 12, 2018 0:24 Inicio
+Fri Oct 12, 2018 0:24 Base de datos conectada
+Fri Oct 12, 2018 0:24 Usuario creado
+Fri Oct 12, 2018 0:24 Comando de base de datos ejecutados
+Fri Oct 12, 2018 0:24 Inicio
+Fri Oct 12, 2018 0:24 Base de datos conectada
+Fri Oct 12, 2018 0:24 Usuario creado
+Fri Oct 12, 2018 0:24 Comando de base de datos ejecutados
