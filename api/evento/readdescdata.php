@@ -35,14 +35,10 @@ if($num>0){
 	// make it json format
 	print_r(json_encode($evento_arr));
 	
-}else{
-	
-	echo json_encode(
+    }else{
+	    echo json_encode(
         array("message" => "No existen eventos con el id suministrados")
-    );
-	
-}
-	
- 
+        );
+    }
 
 ?>
