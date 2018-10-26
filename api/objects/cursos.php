@@ -26,7 +26,7 @@ class cursos{
 		HORAS AS horas,
 		FABRICANTE_ID AS fabricante_id,
 		CATEGORIAS_ID AS categorias_id
-		FROM SEBM.CURSO";
+		FROM CURSO";
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
@@ -43,7 +43,7 @@ class cursos{
 		
 		// query to insert record
 		$query = "INSERT INTO
-					SEBM.CURSO
+					CURSO
 					SET
 			            ID=:id, NOMBRE_CUR=:nombre_cur, HORAS=:horas,FABRICANTE_ID=:fabricante_id,CATEGORIAS_ID=:categorias_id";
 
@@ -69,6 +69,7 @@ class cursos{
 		if($stmt->execute()){
 			return true;
 		}
+		
 		return false;
 	}
 
@@ -106,12 +107,12 @@ function update(){
     if($stmt->execute()){
         return true;
     }
- 
+
     return false;
+
 }
 
 function readOne(){
- 
     // query to read single record
     $query = "SELECT
                 ID AS id, 
@@ -119,10 +120,8 @@ function readOne(){
                 HORAS AS horas,
                 FABRICANTE_ID AS fabricante_id,
                 CATEGORIAS_ID AS categorias_id
-
             FROM
-                SEBM.CURSO
-               
+               CURSO
             WHERE
             id=:id";
             

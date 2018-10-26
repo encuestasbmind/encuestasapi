@@ -12,10 +12,10 @@ $database = new Database();
 $db = $database->getConnection();
 
 // initialize object
-$cursos = new cursos($db);
+$curso = new curso($db);
 
 // query products
-$stmt = $cursos->read();
+$stmt = $curso->read();
 $num = $stmt->rowCount();
 
 // check if more than 0 record found

@@ -23,7 +23,7 @@
 		EST_NOMBRES AS est_nombres, 
 		EST_APELLIDOS AS est_apellidos, 
 		ESTUDIANTE_EMAIL AS estudiante_email
-		FROM SEBM.ESTUDIANTE";
+		FROM ESTUDIANTE";
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
@@ -39,7 +39,7 @@
 		
 		// query to insert record
 		$query = "INSERT INTO
-					SEBM.ESTUDIANTE
+					ESTUDIANTE
 					SET
 						ID=:id, EST_NOMBRES=:est_nombres, EST_APELLIDOS=:est_apellidos, ESTUDIANTE_EMAIL=:estudiante_email";
 
@@ -71,7 +71,7 @@
                 ID AS id
 
             FROM
-                SEBM.ESTUDIANTE
+                ESTUDIANTE
                
             WHERE
             id=:id";

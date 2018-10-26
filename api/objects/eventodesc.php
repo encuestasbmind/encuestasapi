@@ -30,7 +30,7 @@ class eventodesc{
 		CIUDAD_ID AS ciudad_id,
 		PAIS_ID AS pais_id, 
 		ESTADO_EVENTO AS estado_evento
-		FROM SEBM.EVENTO";
+		FROM EVENTO";
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
@@ -47,7 +47,7 @@ class eventodesc{
 		
 		// query to insert record
 		$query = "INSERT INTO
-					SEBM.EVENTO
+					EVENTO
 					SET
 						ID=:id, FECHA_INICIO=:fecha_inicio, FECHA_FINAL=:fecha_final,EV_OBS=:ev_obs,CURSO_ID=:curso_id,INSTRUCTOR_ID=:instructor_id,TIPO_DELIVERY_ID=:tipo_delivery_id,ESTADO_ID=:estado_id,CIUDAD_ID=:ciudad_id, PAIS_ID=:pais_id";
 

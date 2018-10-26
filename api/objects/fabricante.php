@@ -17,7 +17,7 @@ class fabricante{
 	// read fabricante
 	function read(){
 		// select all query
-		$query = "SELECT ID AS id, NOMBRE_FAB AS nombre_fab FROM SEBM.FABRICANTE";
+		$query = "SELECT ID AS id, NOMBRE_FAB AS nombre_fab FROM FABRICANTE";
 		
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
@@ -34,7 +34,7 @@ class fabricante{
 		
 		// query to insert record
 		$query = "INSERT INTO
-					SEBM.FABRICANTE
+					FABRICANTE
 					SET
 						ID=:id, NOMBRE_FAB=:nombre_fab";
 

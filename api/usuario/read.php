@@ -19,12 +19,13 @@ try{
 // instantiate database and fabricante object
 $database = new Database();
 $db = $database->getConnection();
+$usuario = new usuario($db);
 
 $new_data = "\n".  date("D M d, Y G:i") . ' Base de datos conectada';
 fwrite($handle, $new_data);
 
 // initialize object
-$usuario = new usuario($db);
+
 
 $new_data = "\n".  date("D M d, Y G:i") . ' Usuario creado';
 fwrite($handle, $new_data);
@@ -67,6 +68,8 @@ if($num>0){
 
 }else{
 	
+	echo $num;
+
 	echo json_encode(
         array("message" => "No fabricante found.")
     );

@@ -29,7 +29,7 @@ class instructor{
 		FIJO_INST AS fijo_inst,
 		EMAIL_1 AS email_1,
 		EMAIL_2 AS email_2
-		FROM SEBM.INSTRUCTOR";
+		FROM INSTRUCTOR";
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
@@ -46,7 +46,7 @@ class instructor{
 		
 		// query to insert record
 		$query = "INSERT INTO
-					SEBM.INSTRUCTOR
+					INSTRUCTOR
 					SET
 						ID=:id, NOMBRE_INST=:nombre_inst, APELLIDOS_INST=:apellidos_inst,CELULAR_INST=:celular_inst,FIJO_INST=:fijo_inst,EMAIL_1=:email_1,EMAIL_2=:email_2";
 
@@ -139,7 +139,7 @@ function readOne(){
 		EMAIL_2 AS email_2
 
 		FROM 
-		SEBM.INSTRUCTOR
+		INSTRUCTOR
       
             WHERE
             id=:id";

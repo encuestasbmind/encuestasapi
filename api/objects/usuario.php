@@ -25,7 +25,7 @@ class usuario{
 		CONTRASENA AS contrasena, 
 		FECHA_CREACION AS fecha_creacion,
 		PERFIL_ID AS perfil_id
-		FROM SEBM.USUARIO";
+		FROM USUARIO";
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);
@@ -44,7 +44,7 @@ class usuario{
 		
 		// query to insert record
 		$query = "INSERT INTO
-					SEBM.USUARIO
+					USUARIO
 					SET
 						ID=:id, USUARIO=:usuario, CONTRASENA=:contrasena, FECHA_CREACION=:fecha_creacion, PERFIL_ID=:perfil_id";
 
@@ -82,7 +82,7 @@ function update(){
     $query = "UPDATE USUARIO
             SET
                 usuario = :usuario,
-                 contrasena = :contrasena,
+                contrasena = :contrasena,
                 fecha_creacion = :fecha_creacion,
                 perfil_id = :perfil_id
             WHERE
@@ -150,7 +150,7 @@ function readOne(){
 		CONTRASENA AS contrasena, 
 		FECHA_CREACION AS fecha_creacion,
 		PERFIL_ID AS perfil_id
-		FROM SEBM.USUARIO
+		FROM USUARIO
             WHERE
          id = :id"
          ;
